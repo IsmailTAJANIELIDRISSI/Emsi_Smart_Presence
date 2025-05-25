@@ -1,0 +1,120 @@
+<resources>
+<!--    <string name="app_name">MonApp</string>-->
+    <string name="select_class_description">Sélectionnez une classe</string>
+    <string name="refresh">Rafraîchir\n</string>
+    <string name="no_classes_found">Aucune classe trouvée</string>
+    <!-- Toolbar -->
+    <string name="app_name">Gestion de l\'Assiduité</string>
+
+    <!-- Session Date Card -->
+    <string name="session_details">Détails de la Session</string>
+    <string name="session_date">Date de la Session : </string>
+
+    <!-- Selection Cards -->
+    <string name="select_group_info">Sélectionner les Informations du Groupe</string>
+    <string name="select_site">Sélectionner le Site</string>
+    <string name="select_group">Sélectionner le Groupe</string>
+
+    <!-- Statistics Card -->
+    <string name="attendance_statistics">Statistiques de Présence</string>
+    <string name="present_count">Présent : %1$d</string>
+    <string name="absent_count">Absent : %1$d</string>
+    <string name="early_departure_count">Départs Anticipés : %1$d</string>
+
+    <!-- Student List Header -->
+    <string name="student_list_number">#</string>
+    <string name="student_list_student">Étudiant</string>
+    <string name="student_list_present">Présent</string>
+    <string name="student_list_departure">Départ</string>
+
+    <!-- Exception Notes -->
+    <string name="exceptions_alerts">Exceptions et Alertes</string>
+    <string name="exception_note_example">L\'étudiant %1$s a quitté avant la fin du cours.</string>
+
+    <!-- Remarks Section -->
+    <string name="session_notes">Notes de la Session</string>
+    <string name="remarks_hint">Ajouter des remarques (facultatif)</string>
+    <string name="signature_hint">Entrez votre signature</string>
+
+    <!-- Action Buttons -->
+    <string name="save_button">Enregistrer</string>
+    <string name="export_button">Exporter</string>
+
+    <!-- Snackbar Messages -->
+    <string name="error_select_site_group">Veuillez sélectionner un site et un groupe</string>
+    <string name="error_no_students">Aucun étudiant pour enregistrer la présence</string>
+    <string name="error_no_signature">Veuillez entrer votre signature</string>
+    <string name="error_failed_load_sites">Échec du chargement des sites. Veuillez réessayer.</string>
+    <string name="error_failed_load_groups">Échec du chargement des groupes. Veuillez réessayer.</string>
+    <string name="error_failed_load_students">Échec du chargement des étudiants. Veuillez réessayer.</string>
+    <string name="no_students_found">Aucun étudiant trouvé pour le groupe et le site sélectionnés.</string>
+    <string name="attendance_saved">Présence enregistrée avec succès</string>
+    <string name="error_saving_records">Erreur lors de l\'enregistrement de certains enregistrements d\'étudiants</string>
+    <string name="error_saving_session">Échec de l\'enregistrement de la session. Veuillez réessayer.</string>
+    <string name="no_data_to_export">Aucune donnée de présence à exporter</string>
+    <string name="export_success">Exporté vers : Downloads/EMSI_Attendance/%1$s</string>
+    <string name="export_failed">Échec de l\'exportation : %1$s</string>
+    <string name="error_open_file">Impossible d\'ouvrir le fichier. Veuillez vérifier votre dossier Téléchargements.</string>
+
+    <!-- Dialog Messages -->
+    <string name="attendance_alert_title">Alerte de Présence</string>
+    <string name="attendance_alert_message">Plus de 50%% des étudiants sont absents ! Veuillez vérifier s\'il y a un conflit d\'horaire.</string>
+    <string name="high_absence_rate_title">Taux d\'Absence Élevé</string>
+    <string name="high_absence_rate_message">Il y a un taux d\'absence de %1$d%% pour cette session. Pensez à vérifier les conflits d\'horaire ou autres problèmes.</string>
+    <string name="high_early_departure_title">Taux de Départs Anticipés Élevé</string>
+    <string name="high_early_departure_message">Plusieurs étudiants (%1$d) sont partis tôt. Vous devriez enquêter sur la raison.</string>
+    <string name="load_draft_title">Charger le Brouillon</string>
+    <string name="load_draft_message">Voulez-vous charger vos données de présence non enregistrées ?</string>
+    <string name="load_draft_positive">Charger</string>
+    <string name="load_draft_negative">Supprimer</string>
+
+
+
+
+
+    <!-- Planning Activity Strings -->
+    <string name="back_button">Retour</string>
+    <string name="filter_schedule">Filtrer l\'emploi du temps</string>
+    <string name="previous_week">Semaine précédente</string>
+    <string name="next_week">Semaine suivante</string>
+    <string name="current_week">Semaine actuelle</string>
+    <string name="filter_active">Filtres actifs</string>
+    <string name="clear_filter">Effacer les filtres</string>
+    <string name="no_classes_today">Aucun cours prévu</string>
+
+    <!-- Existing strings from your requirements -->
+    <string name="schedule_title">Emploi du Temps</string>
+    <string name="makeup_sessions_title">Rattrapages à Venir</string>
+    <string name="no_schedule_data">Aucun cours prévu pour cette semaine.</string>
+    <string name="no_makeup_sessions">Aucun rattrapage prévu.</string>
+    <string name="filter_by_site">Filtrer par site</string>
+    <string name="filter_by_group">Filtrer par groupe</string>
+    <string name="sort_by_date">Trier par date</string>
+    <string name="sort_by_group">Trier par groupe</string>
+    <string name="mark_attendance">Marquer la présence</string>
+    <string name="error_loading_schedule">Erreur lors du chargement de l\'emploi du temps</string>
+    <string name="error_loading_makeup_sessions">Erreur lors du chargement des rattrapages</string>
+
+
+    <string name="sort_sessions">Trier les rattrapages</string>
+    <string name="total_sessions">Sessions totales</string>
+    <string name="this_week">Cette semaine</string>
+    <string name="sorted_by_date">Trié par date</string>
+    <string name="sorted_by_group">Trié par groupe</string>
+    <string name="clear_sort">Effacer le tri</string>
+    <string name="sort_by">Trier par</string>
+
+
+
+
+
+    <!-- Filter Dialog -->
+    <string name="site">Site</string>
+    <string name="group">Groupe</string>
+    <string name="apply_filter">Appliquer</string>
+    <string name="cancel">Annuler</string>
+
+
+
+
+</resources>
