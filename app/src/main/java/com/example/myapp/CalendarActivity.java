@@ -70,7 +70,6 @@ public class CalendarActivity extends AppCompatActivity {
         setupRecyclerView();
 
         // Add this block to create 10 makeup sessions
-        String currentProfessorId = auth.getCurrentUser() != null ? auth.getCurrentUser().getUid() : "qCjd5nWpqt7aETEJ99UFffnA2"; // Use actual UID
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         String[] dates = {
@@ -95,8 +94,9 @@ public class CalendarActivity extends AppCompatActivity {
                 "Mauvais temps", "Grève étudiante", "Projet urgent", "Séminaire"};
 
         for (int i = 0; i < 10; i++) {
+            final int sessionNumber = i + 1; // Create a final copy of the index
             MakeupSession session = new MakeupSession(
-                    "makeup_session_" + (i + 1),
+                    "makeup_session_" + sessionNumber,
                     courseIds[i],
                     courseTitles[i],
                     groupIds[i],
@@ -109,12 +109,13 @@ public class CalendarActivity extends AppCompatActivity {
             );
 
             db.collection("makeup_sessions")
-                    .document("makeup_session_" + (i + 1))
+                    .document("makeup_session_" + sessionNumber)
                     .set(session)
-                    .addOnSuccessListener(aVoid -> Log.d("Courses nchouf", "Makeup session " + (i + 1) + " added"))
-                    .addOnFailureListener(e -> Log.e("Courses nchouf", "Error adding makeup session " + (i + 1) + ": " + e.getMessage()));
+                    .addOnSuccessListener(aVoid -> Log.d("Courses nchouf", "Makeup session " + sessionNumber + " added"))
+                    .addOnFailureListener(e -> Log.e("Courses nchouf", "Error adding makeup session " + sessionNumber + ": " + e.getMessage()));
         }
-//        setupClickListeners();
+        // setupClickListeners();
+        loadMakeupSessions();
     }
 
     @Override
@@ -156,12 +157,12 @@ public class CalendarActivity extends AppCompatActivity {
 
         db.collection("makeup_sessions")
                 .whereEqualTo("professorId", currentProfessorId)
-                .orderBy("date", Query.Direction.ASCENDING)
                 .get()
                 .addOnCompleteListener(task -> {
                     showLoading(false);
 
                     if (task.isSuccessful()) {
+                        Log.d("Rattr nchouf", "Query successful. Result size: " + task.getResult().size());
                         makeupSessionsList.clear();
                         for (QueryDocumentSnapshot document : task.getResult()) {
                             MakeupSession session = document.toObject(MakeupSession.class);
