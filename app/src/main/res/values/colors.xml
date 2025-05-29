@@ -31,7 +31,12 @@
 
     <color name="error_color">#F44336</color> <!-- Material Red 500 -->
 
-
+    <color name="background">#FEF7FF</color>
+    <color name="message_user">#6750A4</color>
+    <color name="message_bot">#FFFFFF</color>
+    <color name="message_user_text">#FFFFFF</color>
+    <color name="message_bot_text">#1C1B1F</color>
+    <color name="message_stroke">#79747E</color>
 
 
 </resources>

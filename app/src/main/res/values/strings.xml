@@ -114,7 +114,9 @@
     <string name="apply_filter">Appliquer</string>
     <string name="cancel">Annuler</string>
 
-
+    <string name="assistant_title">Assistant Virtuel</string>
+    <string name="type_your_question">Type your question...</string>
+    <string name="welcome_message">Hello! I\'m your virtual assistant. How can I help you with the app today?</string>
 
 
 </resources>

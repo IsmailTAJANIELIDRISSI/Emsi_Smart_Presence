@@ -72,6 +72,12 @@ public class Register extends AppCompatActivity {
 
     }
 
+    private boolean isValidEmsiEmail(String email) {
+        // Vérifie que l'email est valide ET se termine par @emsi-edu.ma
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
+                && email.toLowerCase().endsWith("@emsi-edu.ma");
+    }
+
     private void store_user_firestore(String uid, String email, String fullName) {
         HashMap<Object, Object> user = new HashMap<>();
         user.put("fullName", fullName);
@@ -104,9 +110,15 @@ public class Register extends AppCompatActivity {
             return;
         }
 
+        // Check email format
+        if (!isValidEmsiEmail(email)) {
+            Toast.makeText(this, "Veuillez utiliser votre email professionnel (@emsi-edu.ma)", Toast.LENGTH_LONG).show();
+            return;
+        }
+
         // Check if passwords match
         if (!password.equals(confPassword)) {
-            Toast.makeText(this, "password mismatch", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Les mots de passe ne correspondent pas", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -115,12 +127,9 @@ public class Register extends AppCompatActivity {
             Toast.makeText(this, "Veuillez accepter les termes et conditions", Toast.LENGTH_SHORT).show();
             return;
         }
-        //Toast.makeText(this, "daz", Toast.LENGTH_SHORT).show();
 
-        // Create user with email and password
-      createUserWithEmailAndPassword(email, password, fullName);
+        createUserWithEmailAndPassword(email, password, fullName);
     }
-
     private void createUserWithEmailAndPassword(String email, String password, String fullName) {
         // Disable button to prevent multiple clicks
         btnRegister.setEnabled(false);

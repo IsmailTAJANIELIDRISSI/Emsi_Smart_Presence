@@ -90,17 +90,18 @@
                         app:startIconTint="@color/primary"
                         app:boxStrokeColor="@color/primary"
                         app:hintTextColor="@color/primary"
+                        app:helperText="Utilisez votre email @emsi-edu.ma"
+                        app:helperTextTextColor="@color/primary"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/et_email"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Email"
+                            android:hint="Email professionnel"
                             android:inputType="textEmailAddress"
                             android:textColor="@color/text_primary" />
                     </com.google.android.material.textfield.TextInputLayout>
-
                     <!-- Password Field -->
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/til_password"

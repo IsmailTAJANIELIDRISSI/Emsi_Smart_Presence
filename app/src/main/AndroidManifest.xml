@@ -73,6 +73,10 @@
             android:name=".CalendarActivity"
             android:exported="false"
             android:label="Rattrapage" />
+        <activity
+            android:name=".AssistantActivity"
+            android:exported="false"
+            android:label="Rattrapage" />
 
         <!-- Optional: Service for Firebase Cloud Messaging (if notifications are added later) -->
 <!--        <service-->
